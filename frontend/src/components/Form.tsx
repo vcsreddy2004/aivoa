@@ -37,12 +37,12 @@ export default function Form() {
             setMessages((prev) => [
                 ...prev,
                 {
-                    text: `Filled form`,
+                    text: `Filled form for ${data.data.hcp_name}`,
                     sender: "ai",
                 },
             ]);
         }
-        dispatch(setFormData(data));
+        dispatch(setFormData(data.data));
     };
     return (
         <div className="flex gap-6 p-6 bg-gray-100 min-h-screen">
